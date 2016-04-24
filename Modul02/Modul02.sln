@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kadry", "Kadry\Kadry.csproj", "{9870E3D3-8519-491A-9D16-F0D9D9078CF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestListy", "TestListy\TestListy.csproj", "{FEA8E4F5-6CDC-4656-8C07-E24A41EB8B8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie1", "Zadanie1\Zadanie1.csproj", "{1DDF0896-31FE-426C-B65C-F9E4602D1769}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9870E3D3-8519-491A-9D16-F0D9D9078CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9870E3D3-8519-491A-9D16-F0D9D9078CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9870E3D3-8519-491A-9D16-F0D9D9078CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9870E3D3-8519-491A-9D16-F0D9D9078CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA8E4F5-6CDC-4656-8C07-E24A41EB8B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA8E4F5-6CDC-4656-8C07-E24A41EB8B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA8E4F5-6CDC-4656-8C07-E24A41EB8B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA8E4F5-6CDC-4656-8C07-E24A41EB8B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DDF0896-31FE-426C-B65C-F9E4602D1769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DDF0896-31FE-426C-B65C-F9E4602D1769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DDF0896-31FE-426C-B65C-F9E4602D1769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DDF0896-31FE-426C-B65C-F9E4602D1769}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
