@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnitConverter
 {
-    public static class Objetosc
+    public static class Volume
     {
 
         public enum UNIT { LITER, CUBIC, NOGGIN, GALLON }
