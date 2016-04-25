@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Converter
+namespace UnitConverter
 {
     
     public static class Lenght
     {
         public enum UNIT { METER, MILIMETER, INCH, YARD, NAUTICALMILE, LANDMILE, KILOMETER }
-        public static double Convert(UNIT j1, double value, UNIT j2)
+        public static double Convert(UNIT baseUnit, double value, UNIT resultUnit)
         {
-            return GetLength(GetMetersFromOtherUnit(j1, value), j2);
+            return GetLength(GetMetersFromOtherUnit(baseUnit, value), resultUnit);
         }
 
-        public static double GetMetersFromOtherUnit(UNIT j, double value)
+        public static double GetMetersFromOtherUnit(UNIT baseUnit, double value)
         {
-            switch (j)
+            switch (baseUnit)
             {
                 case UNIT.METER:
                     return value;
@@ -38,9 +38,9 @@ namespace Converter
             }
         }
 
-        public static double GetLength(double metr, UNIT j)
+        public static double GetLength(double metr, UNIT resultUnit)
         {
-            switch (j)
+            switch (resultUnit)
             {
                 case UNIT.METER:
                     return metr;

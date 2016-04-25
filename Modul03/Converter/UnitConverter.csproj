@@ -41,11 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Lenght.cs" />
-    <Compile Include="Ilosc.cs" />
+    <Compile Include="Quantity.cs" />
     <Compile Include="Masa.cs" />
     <Compile Include="Moc.cs" />
     <Compile Include="Objetosc.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Temperatura.cs" />
   </ItemGroup>
