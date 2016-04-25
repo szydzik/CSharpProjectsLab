@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace Bank
 {
@@ -21,6 +22,13 @@ namespace Bank
         public Osoba Wlasciciel { set; get; }
         private decimal saldo;
         private int pin;
+        private const string NAZWAPLIKU = "numer.dat";
+        readonly private int numerKonta;
+        private static int ostatniNumerKonta;
+        private static decimal oprocentowanie = 0.05m;
+        private static decimal debet = 1000;
+        private static string haslo = "P@ssw0rd";
+
 
         public Konto(Osoba wlasciciel):this(wlasciciel,0,0)
         {            
@@ -31,6 +39,97 @@ namespace Bank
             Wlasciciel = wlasciciel;
             this.saldo = saldoPoczatkowe;
             this.pin = pin;
+
+            ostatniNumerKonta++;
+            numerKonta = ostatniNumerKonta;
+            BinaryWriter bw = null;
+            try
+            {
+                bw = new BinaryWriter(File.Open(NAZWAPLIKU, FileMode.Create));
+                bw.Write(ostatniNumerKonta);
+            }
+            finally
+            {
+                if (bw != null)
+                {
+                    bw.Close();
+                }
+            }
+        }
+
+        static Konto()
+        {
+            if (File.Exists(NAZWAPLIKU))
+            {
+                BinaryReader br = null;
+                try
+                {
+                    br = new BinaryReader(File.Open(NAZWAPLIKU, FileMode.Open));
+                    ostatniNumerKonta = br.ReadInt32();
+                }
+                finally
+                {
+                    if (br != null)
+                        br.Close();
+                }
+            }
+            else
+            {
+                ostatniNumerKonta = 0;
+            }
+        }
+
+        public int NumerKonta
+        {
+            get { return numerKonta; }
+        }
+
+        public static decimal Oprocentowanie
+        {
+            get { return oprocentowanie; }
+        }
+
+        public static decimal Debet
+        {
+            get { return debet; }
+        }
+
+        public static bool ZmienHaslo(string stareHaslo, string noweHaslo)
+        {
+            if (stareHaslo == haslo)
+            {
+                haslo = noweHaslo;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool ZmienDebet(string haslo, decimal nowyDebet)
+        {
+            if (Konto.haslo == haslo)
+            {
+                debet = nowyDebet;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static bool ZmienOprocentowanie(string haslo, decimal noweOprocentowanie)
+        {
+            if(Konto.haslo == haslo)
+            {
+                oprocentowanie = noweOprocentowanie;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private bool SprawdzPin(int pin)
@@ -49,7 +148,7 @@ namespace Bank
 
        public bool DokonajWyplaty(decimal kwota, int pin)
         {
-            if (!SprawdzPin(pin) || saldo < kwota)
+            if (!SprawdzPin(pin) || saldo + debet < kwota)
                 return false;
             saldo -= kwota;
             return true;
