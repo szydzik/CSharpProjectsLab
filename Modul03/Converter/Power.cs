@@ -40,4 +40,5 @@ namespace UnitConverter
                     throw new ArgumentException("Nie rozpoznano jednostki");
             }
         }
+    }
 }
