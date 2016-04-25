@@ -21,7 +21,7 @@ namespace Instrumenty
         public override string ToString()
         {
             return "instrument";
-            
+
         }
     }
 }
