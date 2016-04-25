@@ -14,7 +14,7 @@ namespace Bank
             k1.Wplac();
             k1.Wyplac();
             k1.WypiszInformacjeOKoncie();
-            k1.ZmienPin2();
+            k1.ZmienPin();
 
             KontoDlaKonsoli.WypiszDebet();
             KontoDlaKonsoli.WypiszOprocentowanie();

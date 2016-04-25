@@ -69,7 +69,7 @@ namespace Bank
             Console.WriteLine("Informacja dla konta o numerze: {0}", k.NumerKonta);
         }
 
-        public static void ZmienPin2(this Konto k)
+        public static void ZmienPin(this Konto k)
         {
             int stary = pobierzLiczbeInt("Podaj stary pin: ");
             int nowy = pobierzLiczbeInt("Podaj nowy pin: ");
@@ -78,7 +78,7 @@ namespace Bank
             {
                 if(k.ZmienPin(nowy, stary))
                 {
-                    Console.WriteLine("Hasło zostało zmienione");
+                    Console.WriteLine("Pin został zmieniony");
                     return;
                 }
             }
@@ -108,7 +108,7 @@ namespace Bank
 
         public static void WypiszDebet()
         {
-            Console.WriteLine("Aktualny debet na kooncie wynosi {0}", Konto.Debet);
+            Console.WriteLine("Aktualny debet na koncie wynosi {0}", Konto.Debet);
         }
 
         public static void WypiszOprocentowanie()
