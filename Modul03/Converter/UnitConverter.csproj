@@ -44,9 +44,9 @@
     <Compile Include="Mass.cs" />
     <Compile Include="Power.cs" />
     <Compile Include="Quantity.cs" />
-    <Compile Include="Objetosc.cs" />
+    <Compile Include="Volume.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Temperatura.cs" />
+    <Compile Include="Temperature.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

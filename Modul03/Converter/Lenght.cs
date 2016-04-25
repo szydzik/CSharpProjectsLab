@@ -38,24 +38,24 @@ namespace UnitConverter
             }
         }
 
-        public static double GetLength(double metr, UNIT resultUnit)
+        public static double GetLength(double value, UNIT resultUnit)
         {
             switch (resultUnit)
             {
                 case UNIT.METER:
-                    return metr;
+                    return value;
                 case UNIT.MILIMETER:
-                    return metr * 1000;
+                    return value * 1000;
                 case UNIT.INCH:
-                    return metr / 0.0254;
+                    return value / 0.0254;
                 case UNIT.YARD:
-                    return metr / 0.9144;
+                    return value / 0.9144;
                 case UNIT.NAUTICALMILE:
-                    return metr / 1852;
+                    return value / 1852;
                 case UNIT.LANDMILE:
-                    return metr / 1609.344;
+                    return value / 1609.344;
                 case UNIT.KILOMETER:
-                    return metr / 1000;
+                    return value / 1000;
                 default:
                     throw new ArgumentException("Nie rozpoznano jednostki");
             }

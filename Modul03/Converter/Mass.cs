@@ -35,22 +35,22 @@ public static class Mass
             }
         }
 
-        public static double GetMass(double kilogram, UNIT resultUnit)
+        public static double GetMass(double kilos, UNIT resultUnit)
         {
             switch (resultUnit)
             {
                 case UNIT.KILOGRAM:
-                    return kilogram;
+                    return kilos;
                 case UNIT.GRAM:
-                    return kilogram / 1000;
+                    return kilos / 1000;
                 case UNIT.TON:
-                    return kilogram * 1000;
+                    return kilos * 1000;
                 case UNIT.CENTAL:
-                    return kilogram * 100;
+                    return kilos * 100;
                 case UNIT.POUND:
-                    return kilogram * 0.453592;
+                    return kilos * 0.453592;
                 case UNIT.OUNCE:
-                    return kilogram * 0.02835;
+                    return kilos * 0.02835;
                 default:
                     throw new ArgumentException("Nie rozpoznano jednostki");
             }

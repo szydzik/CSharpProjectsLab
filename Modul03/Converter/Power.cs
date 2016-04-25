@@ -28,14 +28,14 @@ namespace UnitConverter
             }
         }
 
-        public static double GetPower(double metr, UNIT resultUnit)
+        public static double GetPower(double watts, UNIT resultUnit)
         {
             switch (resultUnit)
             {
                 case UNIT.WATT:
-                    return metr;
+                    return watts;
                 case UNIT.HORSEPOWER:
-                    return metr / 735.498;
+                    return watts / 735.498;
                 default:
                     throw new ArgumentException("Nie rozpoznano jednostki");
             }
