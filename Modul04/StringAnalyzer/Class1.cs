@@ -157,7 +157,7 @@ namespace StringAnalyzer
             int i = 0;
             foreach (char c in s)
             {
-                if (c > 'a' && c < 'z') i++;
+                if (char.IsLower(c)) i++;
             }
             return i;
         }
@@ -167,7 +167,7 @@ namespace StringAnalyzer
             int i = 0;
             foreach (char c in s)
             {
-                if (c > 'A' && c < 'Z') i++;
+                if (char.IsUpper(c)) i++;
             }
             return i;
         }
