@@ -11,10 +11,12 @@ namespace StringAnalyzerTest
     {
         static void Main(string[] args)
         {
-                string s = "Przyciakladowy ciag znakowcia";
-                Console.WriteLine(s.Countcharappear('a'));
-                Console.WriteLine(s.Countstringappear("cia"));
-                Console.ReadKey();
+            string s = "Przyciakladowy ciag znakowciap";
+            Console.WriteLine(s.CountCharAppears('a'));
+            Console.WriteLine(s.CountStringAppears("cia"));
+            Console.WriteLine(s.CountLetterUpperAndLowerAppears('p'));
+            Console.WriteLine(s.CountLetterAppears('p'));
+            Console.ReadKey();
         }
     }
 }
