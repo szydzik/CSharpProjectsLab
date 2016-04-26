@@ -152,5 +152,25 @@ namespace StringAnalyzer
             return i;
         }
 
+        public static int CountLowerCaseLetters(this string s)
+        {
+            int i = 0;
+            foreach (char c in s)
+            {
+                if (c > 'a' && c < 'z') i++;
+            }
+            return i;
+        }
+
+        public static int CountUpperCaseLetters(this string s)
+        {
+            int i = 0;
+            foreach (char c in s)
+            {
+                if (c > 'A' && c < 'Z') i++;
+            }
+            return i;
+        }
+
     }
 }

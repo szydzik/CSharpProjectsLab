@@ -25,6 +25,8 @@ namespace StringAnalyzerTest
             Console.WriteLine(s.CountDigits());
             Console.WriteLine(s.CountAlphanumericCharacters());
             Console.WriteLine(s.CountWhiteSpaces());
+            Console.WriteLine(s.CountLowerCaseLetters());
+            Console.WriteLine(s.CountUpperCaseLetters());
             Console.ReadKey();
         }
     }
