@@ -18,7 +18,7 @@ namespace StringAnalyzerTest
             Console.WriteLine(s.CountLetterUpperAndLowerAppears('p'));
             Console.WriteLine(s.CountLetterAppears('p'));
             Console.WriteLine(s.CountPhraseAppears("dao"));
-            Console.WriteLine(s.CountPhraseUpperAndLowerAppears("dao"));
+            Console.WriteLine(s.CountPhraseIgnoreCaseAppears("dao"));
             Console.WriteLine(s2.CountVovelAppears());
             Console.WriteLine(s2.CountConsonatAppears());
             Console.ReadKey();

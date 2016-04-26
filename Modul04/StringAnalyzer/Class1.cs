@@ -68,7 +68,7 @@ namespace StringAnalyzer
             return s.Split(new string[] { phrase }, StringSplitOptions.None).Length - 1;
         }
 
-        public static int CountPhraseUpperAndLowerAppears(this string s, string phrase)
+        public static int CountPhraseIgnoreCaseAppears(this string s, string phrase)
         {
             return s.ToUpper().Split(new string[] { phrase.ToUpper() }, StringSplitOptions.None).Length - 1;
         }
@@ -122,6 +122,14 @@ namespace StringAnalyzer
             return sum;
         }
 
-
+        public static int CountAllLetters(this string s)
+        {
+            int i = 0;
+            foreach (char c in s)
+            {
+                if (char.IsLetter(c)) i++;
+            }
+            return i;
+        }
     }
 }
