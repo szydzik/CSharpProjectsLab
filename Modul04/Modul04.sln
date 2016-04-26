@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank", "Bank\Bank.csproj", "{91938AF0-5C9C-4478-9CEC-D19EAF4FCF58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringAnalyzer", "StringAnalyzer\StringAnalyzer.csproj", "{785F3D1F-4C89-4573-B6C5-C2AAD898AD72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringAnalyzerTest", "StringAnalyzerTest\StringAnalyzerTest.csproj", "{BDC9215F-2BDF-442A-80FA-21E4C5429DAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{91938AF0-5C9C-4478-9CEC-D19EAF4FCF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91938AF0-5C9C-4478-9CEC-D19EAF4FCF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91938AF0-5C9C-4478-9CEC-D19EAF4FCF58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{785F3D1F-4C89-4573-B6C5-C2AAD898AD72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{785F3D1F-4C89-4573-B6C5-C2AAD898AD72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{785F3D1F-4C89-4573-B6C5-C2AAD898AD72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{785F3D1F-4C89-4573-B6C5-C2AAD898AD72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC9215F-2BDF-442A-80FA-21E4C5429DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC9215F-2BDF-442A-80FA-21E4C5429DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC9215F-2BDF-442A-80FA-21E4C5429DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC9215F-2BDF-442A-80FA-21E4C5429DAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
