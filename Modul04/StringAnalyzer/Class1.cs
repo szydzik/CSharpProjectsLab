@@ -73,7 +73,7 @@ namespace StringAnalyzer
             return s.ToUpper().Split(new string[] { phrase.ToUpper() }, StringSplitOptions.None).Length - 1;
         }
 
-        public static int CountLetterAppears(this string s)
+        public static int CountLetters(this string s)
         {
             int i = 0;
             foreach (char c in s)
@@ -122,14 +122,35 @@ namespace StringAnalyzer
             return sum;
         }
 
-        public static int CountAllLetters(this string s)
+        public static int CountDigits(this string s)
         {
             int i = 0;
             foreach (char c in s)
             {
-                if (char.IsLetter(c)) i++;
+                if (Char.IsDigit(c)) i++;
             }
             return i;
         }
+
+        public static int CountAlphanumericCharacters(this string s)
+        {
+            int i = 0;
+            foreach (char c in s)
+            {
+                if (Char.IsLetterOrDigit(c)) i++;
+            }
+            return i;
+        }
+
+        public static int CountWhiteSpaces(this string s)
+        {
+            int i = 0;
+            foreach (char c in s)
+            {
+                if (Char.IsWhiteSpace(c)) i++;
+            }
+            return i;
+        }
+
     }
 }
