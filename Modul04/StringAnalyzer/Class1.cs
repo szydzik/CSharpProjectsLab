@@ -51,7 +51,7 @@ namespace StringAnalyzer
 
         public static int CountLetterAppears(this string s, char letter)
         {
-            int i = 0; 
+            int i = 0;
             if (Char.IsLetter(letter))
             {
                 foreach (char c in s)
@@ -61,6 +61,65 @@ namespace StringAnalyzer
                 return i;
             }
             return -1; // value -1 nie wprowadzono poprawnego znaku 
+        }
+
+        public static int CountPhraseAppears(this string s, string phrase)
+        {
+            return s.Split(new string[] { phrase }, StringSplitOptions.None).Length - 1;
+        }
+
+        public static int CountPhraseUpperAndLowerAppears(this string s, string phrase)
+        {
+            return s.ToUpper().Split(new string[] { phrase.ToUpper() }, StringSplitOptions.None).Length - 1;
+        }
+
+        public static int CountLetterAppears(this string s)
+        {
+            int i = 0;
+            foreach (char c in s)
+            {
+                if (Char.IsLetter(c)) i++;
+            }
+            return i;
+        }
+
+        private static bool IsVovel(char c)
+        {
+            return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y'
+                || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' || c == 'Y';
+        }
+        private static bool IsConsonant(char c)
+        {
+            return c == 'b' || c == 'c' || c == 'd' || c == 'f' || c == 'g' || c == 'h' || c == 'j' || c == 'k' || c == 'l' || c == 'm' ||
+                   c == 'n' || c == 'p' || c == 'q' || c == 'r' || c == 's' || c == 't' || c == 'v' || c == 'w' || c == 'x' || c == 'z' ||
+                   c == 'B' || c == 'C' || c == 'D' || c == 'F' || c == 'G' || c == 'H' || c == 'J' || c == 'K' || c == 'L' || c == 'M' ||
+                   c == 'N' || c == 'P' || c == 'Q' || c == 'R' || c == 'S' || c == 'T' || c == 'V' || c == 'W' || c == 'X' || c == 'Z';
+        }
+
+        public static int CountVovelAppears(this string s)
+        {
+            int sum = 0;
+            for (int i = 0; i < s.Length; ++i)
+            {
+                if (IsVovel(s[i]))
+                {
+                    sum++;
+                }
+            }
+            return sum;
+        }
+
+        public static int CountConsonatAppears(this string s)
+        {
+            int sum = 0;
+            for (int i = 0; i < s.Length; ++i)
+            {
+                if (IsConsonant(s[i]))
+                {
+                    sum++;
+                }
+            }
+            return sum;
         }
 
 
