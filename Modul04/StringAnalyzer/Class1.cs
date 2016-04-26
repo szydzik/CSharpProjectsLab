@@ -63,6 +63,36 @@ namespace StringAnalyzer
             return -1; // value -1 nie wprowadzono poprawnego znaku 
         }
 
+        //nie wiem czym odróżnić frazę od ciągu znaków więc jest tak samo jak wcześniej :P
+        public static int CountPhraseAppears(this string s,string phrase)
+        {
+            return s.Split(new string[] { phrase }, StringSplitOptions.None).Length - 1;
+        }
+
+        public static int CountPhraseIgnoreCaseAppears(this string s,string phrase)
+        {
+            string tempstring = "";
+            string tempphrase = "";
+            foreach(char c in s)
+            {
+                tempstring += char.ToUpper(c);
+            }
+            foreach(char c in phrase)
+            {
+                tempphrase += char.ToUpper(c);
+            }
+            return tempstring.Split(new string[] { tempphrase }, StringSplitOptions.None).Length - 1;
+        }
+
+        public static int CountAllLetters(this string s)
+        {
+            int i = 0;
+            foreach(char c in s)
+            {
+                if (char.IsLetter(c)) i++;
+            }
+            return i;
+        }
 
     }
 }

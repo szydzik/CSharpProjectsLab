@@ -16,6 +16,9 @@ namespace StringAnalyzerTest
             Console.WriteLine(s.CountStringAppears("cia"));
             Console.WriteLine(s.CountLetterUpperAndLowerAppears('p'));
             Console.WriteLine(s.CountLetterAppears('p'));
+            Console.WriteLine(s.CountPhraseAppears("owy ciag"));
+            Console.WriteLine(s.CountPhraseIgnoreCaseAppears("DoWy CiA"));
+            Console.WriteLine(s.CountAllLetters());
             Console.ReadKey();
         }
     }
