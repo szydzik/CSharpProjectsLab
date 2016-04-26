@@ -8,8 +8,6 @@ namespace StringAnalyzer
 {
     public static class Class1
     {
-        public static char[] LettersUpperCase = new char[] { 'A', 'Ą', 'B', 'C', 'Ć', 'D', 'E', 'Ę', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'Ł', 'M', 'N', 'Ń', 'O', 'Ó', 'P', 'Q', 'R', 'S', 'Ś', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Ź', 'Ż' };
-        public static char[] LettersLowerCase = new char[] { 'a', 'ą', 'b', 'c', 'ć', 'd', 'e', 'ę', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'ł', 'm', 'n', 'ń', 'o', 'ó', 'p', 'q', 'r', 's', 'ś', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'ź', 'ż' };
         /// <summary>
         /// Metoda liczy ilość wystąpień znaku podanego jako parametr
         /// </summary>
@@ -40,12 +38,11 @@ namespace StringAnalyzer
         public static int CountLetterUpperAndLowerAppears(this string s, char letter)
         {
             int i = 0;
-            if (LettersUpperCase.Any(x => x.Equals(letter)) || LettersLowerCase.Any(x => x.Equals(letter)))
+            if (Char.IsLetter(letter))
             {
                 foreach (char c in s)
                 {
                     if (Char.ToUpper(c) == Char.ToUpper(letter)) i++;
-                    //if (c == letter) i++;
                 }
                 return i;
             }
@@ -54,8 +51,8 @@ namespace StringAnalyzer
 
         public static int CountLetterAppears(this string s, char letter)
         {
-            int i = 0;
-            if (LettersUpperCase.Any(x => x.Equals(letter)))
+            int i = 0; 
+            if (Char.IsLetter(letter))
             {
                 foreach (char c in s)
                 {
@@ -63,15 +60,7 @@ namespace StringAnalyzer
                 }
                 return i;
             }
-            else if (LettersLowerCase.Any(x => x.Equals(letter)))
-            {
-                foreach (char c in s)
-                {
-                    if (c == letter) i++;
-                }
-                return i;
-            }
-            return -1;
+            return -1; // value -1 nie wprowadzono poprawnego znaku 
         }
 
 
