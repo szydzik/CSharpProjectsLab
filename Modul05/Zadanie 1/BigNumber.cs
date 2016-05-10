@@ -9,7 +9,17 @@ namespace Zadanie1
     class BigNumber
     {
         private decimal number;
-        public static int Precision { get; set; }
+        private static int precision=5;
+
+        public static int Precision
+        {
+            get { return precision; }
+            set
+            {
+                if (value >= 0 && value <= 20) precision = value;
+                else throw new ArgumentOutOfRangeException("Dokładność musi mieścić się w przedziale od 0 do 20!");
+            }
+        }
 
         public decimal Number
         {
