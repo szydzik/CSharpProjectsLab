@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sortowanie", "Sortowanie\Sortowanie.csproj", "{748C77C6-EEAA-429B-862E-23B45C913E81}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drzewa", "Drzewa\Drzewa.csproj", "{EF7F54C5-E225-4653-9A32-D06EC073F55E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDrzewa", "TestDrzewa\TestDrzewa.csproj", "{60E97FCC-AC0F-4213-8518-2C3C7451C8BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zadanie1", "Zadanie1\Zadanie1.csproj", "{FD189769-E192-49EE-B7E8-C4827ACA356A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{60E97FCC-AC0F-4213-8518-2C3C7451C8BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60E97FCC-AC0F-4213-8518-2C3C7451C8BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60E97FCC-AC0F-4213-8518-2C3C7451C8BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD189769-E192-49EE-B7E8-C4827ACA356A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD189769-E192-49EE-B7E8-C4827ACA356A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD189769-E192-49EE-B7E8-C4827ACA356A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD189769-E192-49EE-B7E8-C4827ACA356A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
