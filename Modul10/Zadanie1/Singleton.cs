@@ -31,7 +31,7 @@ namespace Zadanie1
         private static object _syncobj = new object();
         private static volatile T _instance = null;
 
-        public Singleton2()
+        private Singleton2()
         {
         }
 
