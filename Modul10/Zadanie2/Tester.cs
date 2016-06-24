@@ -22,10 +22,10 @@ namespace AVLTree
             Console.WriteLine(tree1);
 
 
-            foreach (var node in tree1)
-            {
-                Console.WriteLine(node);
-            }
+            //foreach (var node in tree1)
+            //{
+            //    Console.WriteLine(node);
+            //}
 
             Console.ReadKey();
         }

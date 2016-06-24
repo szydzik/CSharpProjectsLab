@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AVLTree
 {
-    public class AVLTree<TKey, TValue> : IEnumerable<AVLNode<TKey, TValue>> where TKey : IComparable<TKey>
+    public class AVLTree<TKey, TValue> where TKey : IComparable<TKey>
     {
         private AVLNode<TKey, TValue> root;
 
@@ -372,35 +372,6 @@ namespace AVLTree
             RotateLeftLeft(node);
         }
 
-
-        //Traverses the tree in pre-order.
-        public IEnumerator<AVLNode<TKey, TValue>> GetEnumerator()
-        {
-            Queue<AVLNode<TKey, TValue>> queue = new Queue<AVLNode<TKey, TValue>>();
-            queue.Enqueue(this.root);
-
-            AVLNode<TKey, TValue> tmp;
-            while (queue.Count > 0)
-            {
-                tmp = queue.Dequeue();
-
-                if (tmp.LeftChild != null)
-                {
-                    queue.Enqueue(tmp.LeftChild);
-                }
-                if (tmp.RightChild != null)
-                {
-                    queue.Enqueue(tmp.RightChild);
-                }
-
-                yield return tmp;
-            }
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.GetEnumerator();
-        }
 
         public override string ToString()
         {
