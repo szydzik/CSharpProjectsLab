@@ -10,25 +10,17 @@ namespace AVLTree
     {
         static void Main(string[] args)
         {
-            AVLTree<int, int> tree1 = new AVLTree<int, int>();
-            AVLTree<int, int> tree2 = new AVLTree<int, int>();
+            AVLTree<int, string> tree1 = new AVLTree<int, string>();
 
-            tree1.Insert(1, 1);
-            tree1.Insert(465456544, 465456544);
-            tree1.Insert(43, 43);
-            tree1.Insert(-43, -43);
-            tree1.Insert(-66, -66);
+            tree1.Insert(1, "jedynka");
+            tree1.Insert(1130, "tysiac sto trzydziesci");
+            tree1.Insert(43, "czterdziesci trzy");
+            tree1.Insert(-50, "minus piecdziesiat");
+            tree1.Insert(-66, "minus szesciesiat szesc");
 
-            tree2.Insert(1, 1);
-            tree2.Insert(465456544, 465456544);
-            tree2.Insert(43, 43);
-            tree2.Insert(-43, -43);
-            tree2.Insert(-66, -66);
 
             Console.WriteLine(tree1);
 
-            Console.WriteLine("hash codes: " + tree1.GetHashCode() + "  " + tree2.GetHashCode());
-            Console.WriteLine("tree1 == tree2 " + (tree1 == tree2));
 
             foreach (var node in tree1)
             {
