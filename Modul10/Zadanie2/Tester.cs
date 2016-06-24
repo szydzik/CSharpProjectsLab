@@ -17,15 +17,12 @@ namespace AVLTree
             tree1.Insert(43, "czterdziesci trzy");
             tree1.Insert(-50, "minus piecdziesiat");
             tree1.Insert(-66, "minus szesciesiat szesc");
-
+            tree1.Insert(12, "dwanascie");
+            tree1.Insert(5, "5");
+            tree1.Insert(6, "szesc");
+            tree1.Insert(0, "zero");
 
             Console.WriteLine(tree1);
-
-
-            //foreach (var node in tree1)
-            //{
-            //    Console.WriteLine(node);
-            //}
 
             Console.ReadKey();
         }
