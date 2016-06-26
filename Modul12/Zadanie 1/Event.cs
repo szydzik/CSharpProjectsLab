@@ -8,7 +8,7 @@ using System.Threading;
 namespace Zadanie_1
 {
     
-    public class Event
+    public class MyEvent
     {
         public enum STATUS { WAITING, RUNNED, ABORTED, FINISHED };
         public enum TYPE { CYCLIC, SINGLE};
@@ -21,7 +21,7 @@ namespace Zadanie_1
         
 
 
-        public Event(int Id, string Name, DateTime StartDateTime, DateTime EndDateTime, TYPE type)
+        public MyEvent(int Id, string Name, DateTime StartDateTime, DateTime EndDateTime, TYPE type)
         {
             this.Id = Id;
             this.Name = Name;
@@ -30,12 +30,12 @@ namespace Zadanie_1
             this.Status = STATUS.WAITING;
         }
 
-        public Event(int Id, string Name, DateTimeOffset dateTimeOffsetToStart, DateTimeOffset dateTimeOffsetToEnd)
+        public MyEvent(int Id, string Name, DateTimeOffset dateTimeOffsetToStart, DateTimeOffset dateTimeOffsetToEnd)
         {
             throw new NotImplementedException();
         }
 
-        public void doSomething()
+        public void Run()
         {
             do
             {
