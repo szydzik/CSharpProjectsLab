@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AVLTree
+namespace Zadanie2
 {
     public class AVLTree<TKey, TValue> where TKey : IComparable<TKey>
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AVLTree
+namespace Zadanie2
 {
     class Tester
     {
